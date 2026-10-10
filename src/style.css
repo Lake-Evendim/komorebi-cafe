@@ -1,0 +1,41 @@
+:root { font-family: 'Yu Gothic UI', 'Microsoft YaHei', sans-serif; color: #fffdf9; background: #a9cfde; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+[hidden] { display: none !important; }
+button, select, input, summary { font: inherit; }
+button, summary { cursor: pointer; }
+button { color: inherit; border: 1px solid #ffffff55; background: #324b55b3; border-radius: 3px; padding: 10px 15px; }
+button:hover { background: #496976; }
+button[aria-pressed='true'] { background: #e8d5ca; color: #314854; }
+:focus-visible { outline: 3px solid #ffe4a0; outline-offset: 3px; }
+#scene, canvas { position: fixed; inset: 0; width: 100%; height: 100%; }
+canvas { touch-action: none; }
+header { position: fixed; top: 26px; left: 30px; pointer-events: none; text-shadow: 0 2px 5px #24394cb3; }
+h1 { font-family: 'Yu Mincho', 'SimSun', serif; font-size: 25px; letter-spacing: .13em; margin: 0 0 8px; font-weight: 500; }
+header p { font-size: 11px; margin: 0; }
+#settings { position: fixed; right: 28px; top: 26px; background: #304855d9; border: 1px solid #ffffff38; border-radius: 4px; font-size: 11px; width: 230px; }
+#settings:not([open]) { width: auto; }
+summary { padding: 12px 14px; }
+label { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 12px 14px; }
+select { background: #e9e4d9; color: #314854; border: 0; padding: 5px; border-radius: 2px; font-size: 10px; }
+#pause { margin: 0 14px 8px; font-size: 11px; }
+#metrics, .note { margin: 8px 14px 14px; font-size: 10px; line-height: 1.8; white-space: pre-line; }
+footer { position: fixed; bottom: 22px; left: 30px; right: 28px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+nav { display: flex; gap: 5px; overflow-x: auto; max-width: 100%; }
+nav button { white-space: nowrap; }
+footer > div { display: flex; gap: 5px; margin-left: auto; }
+footer button { font-size: 11px; }
+footer p { width: 100%; margin: 4px 0 0; font-size: 10px; text-shadow: 0 1px 5px #24394ccc; }
+body.clean header, body.clean footer, body.clean #settings { visibility: hidden; }
+#restore { position: fixed; right: 25px; bottom: 22px; font-size: 11px; }
+dialog { width: min(940px, 94vw); max-height: 92dvh; border: 0; border-radius: 5px; padding: 18px; background: #e8e4da; color: #314854; }
+dialog::backdrop { background: #203543b8; }
+.capture-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.capture-heading h2 { font-family: 'Yu Mincho', 'SimSun', serif; font-size: 15px; font-weight: 500; }
+.capture-heading button { color: white; padding: 4px 10px; font-size: 20px; }
+dialog img { width: 100%; max-height: 68dvh; object-fit: contain; display: block; }
+dialog a { display: block; margin-top: 14px; padding: 12px; text-align: center; background: #526f79; color: white; text-decoration: none; font-size: 12px; }
+#loading { position: fixed; inset: 0; display: grid; place-content: center; text-align: center; color: #526f79; background: #e4ebec; }
+#loading span { font-family: 'Yu Mincho', 'SimSun', serif; font-size: 27px; letter-spacing: .13em; }
+#loading p { font-size: 12px; }
+@media(max-width:650px) { header { top: 18px; left: 17px; } h1 { font-size: 21px; } #settings { right: 17px; top: 18px; } footer { left: 16px; right: 16px; bottom: 16px; } footer > div { margin-left: 0; } footer p { font-size: 9px; } button { padding: 9px 11px; } }

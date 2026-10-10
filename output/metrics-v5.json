@@ -1,0 +1,294 @@
+{
+  "high": {
+    "fps": 26.7,
+    "calls": 321,
+    "triangles": 3250508,
+    "resolution": [
+      1600,
+      900
+    ],
+    "samples": 4,
+    "shadow": 4096,
+    "quality": "high",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 3274,
+    "build": {
+      "sourceParts": 9371,
+      "mergedMeshes": 298,
+      "triangles": 750570,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "art": {
+        "subjects": [
+          "karesansui garden",
+          "window-side coffee still life"
+        ],
+        "textures": [
+          [
+            1536,
+            1024
+          ],
+          [
+            1536,
+            1152
+          ]
+        ]
+      },
+      "books": {
+        "closed": 44,
+        "open": 1,
+        "spines": "individual titles and layered page blocks",
+        "cabinet": {
+          "min": [
+            -1.902500033378601,
+            0.3499999940395355,
+            -3.325000047683716
+          ],
+          "max": [
+            -1.5175000429153442,
+            2.2899999618530273,
+            -2.115000009536743
+          ],
+          "height": 1.94,
+          "placement": "left rear opaque wall",
+          "aisleClearance": 2.067500042915344
+        }
+      },
+      "equipment": {
+        "espressoGroups": 2,
+        "siphons": 1,
+        "style": "low-profile graphite and stainless dual boiler",
+        "controls": "temperature, pressure, shot timers and yield displays",
+        "grinder": "weight dosing touchscreen, individual beans and adjustment dial",
+        "pourOver": "scale, server, fluted dripper, filter and temperature controlled kettle"
+      },
+      "cakes": {
+        "count": 6,
+        "varieties": [
+          "strawberry shortcake",
+          "berry tart",
+          "opera",
+          "Basque cheesecake",
+          "matcha mille crepe",
+          "Mont Blanc"
+        ]
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "attachmentCurves": 3420,
+      "pedicelTriangles": 314640,
+      "petals": {
+        "emitter": "actual blossom positions",
+        "count": 220,
+        "maxBirthHeight": 7.962694446453126,
+        "minBirthHeight": 3.7799831559637935,
+        "birthAboveCanopy": 0,
+        "roofResting": 52,
+        "roofLandings": 6,
+        "buildingContacts": 6,
+        "rejectedSources": 0,
+        "collisionTriangles": 34750,
+        "pathSamples": 96,
+        "collision": "precomputed first contact on actual roof, glass and shell"
+      },
+      "activeFlowerTriangles": 2170348,
+      "flowerLevels": [
+        14761,
+        8494,
+        2965
+      ]
+    },
+    "threeRevision": "186"
+  },
+  "balanced": {
+    "fps": 33,
+    "calls": 320,
+    "triangles": 2882008,
+    "resolution": [
+      1280,
+      720
+    ],
+    "samples": 4,
+    "shadow": 2048,
+    "quality": "balanced",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 3274,
+    "build": {
+      "sourceParts": 9371,
+      "mergedMeshes": 298,
+      "triangles": 750570,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "art": {
+        "subjects": [
+          "karesansui garden",
+          "window-side coffee still life"
+        ],
+        "textures": [
+          [
+            1536,
+            1024
+          ],
+          [
+            1536,
+            1152
+          ]
+        ]
+      },
+      "books": {
+        "closed": 44,
+        "open": 1,
+        "spines": "individual titles and layered page blocks",
+        "cabinet": {
+          "min": [
+            -1.902500033378601,
+            0.3499999940395355,
+            -3.325000047683716
+          ],
+          "max": [
+            -1.5175000429153442,
+            2.2899999618530273,
+            -2.115000009536743
+          ],
+          "height": 1.94,
+          "placement": "left rear opaque wall",
+          "aisleClearance": 2.067500042915344
+        }
+      },
+      "equipment": {
+        "espressoGroups": 2,
+        "siphons": 1,
+        "style": "low-profile graphite and stainless dual boiler",
+        "controls": "temperature, pressure, shot timers and yield displays",
+        "grinder": "weight dosing touchscreen, individual beans and adjustment dial",
+        "pourOver": "scale, server, fluted dripper, filter and temperature controlled kettle"
+      },
+      "cakes": {
+        "count": 6,
+        "varieties": [
+          "strawberry shortcake",
+          "berry tart",
+          "opera",
+          "Basque cheesecake",
+          "matcha mille crepe",
+          "Mont Blanc"
+        ]
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "attachmentCurves": 3420,
+      "pedicelTriangles": 314640,
+      "petals": {
+        "emitter": "actual blossom positions",
+        "count": 220,
+        "maxBirthHeight": 7.962694446453126,
+        "minBirthHeight": 3.7799831559637935,
+        "birthAboveCanopy": 0,
+        "roofResting": 52,
+        "roofLandings": 6,
+        "buildingContacts": 6,
+        "rejectedSources": 0,
+        "collisionTriangles": 34750,
+        "pathSamples": 96,
+        "collision": "precomputed first contact on actual roof, glass and shell"
+      },
+      "activeFlowerTriangles": 1801848,
+      "flowerLevels": [
+        18161,
+        6331,
+        1728
+      ]
+    },
+    "threeRevision": "186"
+  }
+}

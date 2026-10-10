@@ -1,0 +1,424 @@
+{
+  "finiteAttributes": 1141,
+  "shaderChecks": 380,
+  "petalSamples": 220000,
+  "indoors": 0,
+  "aboveBirth": 0,
+  "exteriorSamples": [
+    {
+      "point": [
+        2,
+        1.9,
+        -4.075
+      ],
+      "mask": 0
+    },
+    {
+      "point": [
+        6.08,
+        1.9,
+        -0.8
+      ],
+      "mask": 0
+    },
+    {
+      "point": [
+        -2.075,
+        1.9,
+        -2.7
+      ],
+      "mask": 0
+    },
+    {
+      "point": [
+        2,
+        4,
+        -4
+      ],
+      "mask": 0
+    },
+    {
+      "point": [
+        2,
+        1.9,
+        2.535
+      ],
+      "mask": 0
+    }
+  ],
+  "sidewalkTop": 0.115,
+  "transparentObjects": 17,
+  "build": {
+    "sourceParts": 10821,
+    "mergedMeshes": 350,
+    "triangles": 836068,
+    "individuallySortedTransparentParts": 17,
+    "room": {
+      "seating": "upholstered counter stools, wall banquette and window table",
+      "pendants": 3,
+      "fixture": "thick green enamel shade, brass rolled rim, socket and opal LED bulb"
+    },
+    "art": {
+      "subjects": [
+        "karesansui garden",
+        "window-side coffee still life"
+      ],
+      "textures": [
+        [
+          1536,
+          1024
+        ],
+        [
+          1536,
+          1152
+        ]
+      ]
+    },
+    "books": {
+      "closed": 43,
+      "open": 1,
+      "layouts": [
+        {
+          "theme": "large-format garden and design collection",
+          "upright": 12,
+          "stacked": 2,
+          "display": 0,
+          "shelf": 0.13
+        },
+        {
+          "theme": "travel books between offset stacks",
+          "upright": 6,
+          "stacked": 6,
+          "display": 0,
+          "shelf": 0.52
+        },
+        {
+          "theme": "face-out coffee and craft recommendations",
+          "upright": 5,
+          "stacked": 0,
+          "display": 2,
+          "shelf": 0.94
+        },
+        {
+          "theme": "small paperbacks, journals and a ceramic vase",
+          "upright": 7,
+          "stacked": 3,
+          "display": 0,
+          "shelf": 1.43
+        }
+      ],
+      "spines": "shared artwork with varied format and physical page blocks",
+      "cabinet": {
+        "min": [
+          -1.902500033378601,
+          0.3499999940395355,
+          -3.325000047683716
+        ],
+        "max": [
+          -1.5175000429153442,
+          2.2899999618530273,
+          -2.115000009536743
+        ],
+        "height": 1.94,
+        "placement": "left rear opaque wall",
+        "aisleClearance": 2.067500042915344
+      }
+    },
+    "equipment": {
+      "espressoGroups": 3,
+      "style": "full-size three-group graphite commercial chassis with operator-facing controls",
+      "machineSize": [
+        1.299999713897705,
+        0.6682804822921753,
+        0.7949999570846558
+      ],
+      "machineBounds": {
+        "min": [
+          3.880000114440918,
+          1.202499508857727,
+          -2.3989999294281006
+        ],
+        "max": [
+          5.179999828338623,
+          1.8707799911499023,
+          -1.6039999723434448
+        ]
+      },
+      "grinders": 2,
+      "grinderHeight": 0.724,
+      "controls": "per-group shot displays and paddles, twin pressure gauges, dual steam arms",
+      "orientation": "operating face toward rear working aisle",
+      "pourOver": "separate scale, server, fluted dripper and kettle"
+    },
+    "bar": {
+      "rearBounds": {
+        "min": [
+          0.5,
+          0.3540000021457672,
+          -3.9000000953674316
+        ],
+        "max": [
+          5.5,
+          1.4907972812652588,
+          -3.3399999141693115
+        ]
+      },
+      "shelves": [
+        {
+          "min": [
+            0.5199999809265137,
+            1.8730000257492065,
+            -3.8450000286102295
+          ],
+          "max": [
+            1.9900000095367432,
+            1.906999945640564,
+            -3.5350000858306885
+          ]
+        },
+        {
+          "min": [
+            0.5199999809265137,
+            2.4830000400543213,
+            -3.8450000286102295
+          ],
+          "max": [
+            1.9900000095367432,
+            2.5169999599456787,
+            -3.5350000858306885
+          ]
+        },
+        {
+          "min": [
+            0.5199999809265137,
+            2.882999897003174,
+            -3.8450000286102295
+          ],
+          "max": [
+            1.9900000095367432,
+            2.9170000553131104,
+            -3.5350000858306885
+          ]
+        },
+        {
+          "min": [
+            3.630000114440918,
+            1.8730000257492065,
+            -3.8450000286102295
+          ],
+          "max": [
+            5.53000020980835,
+            1.906999945640564,
+            -3.5350000858306885
+          ]
+        },
+        {
+          "min": [
+            3.630000114440918,
+            2.4830000400543213,
+            -3.8450000286102295
+          ],
+          "max": [
+            5.53000020980835,
+            2.5169999599456787,
+            -3.5350000858306885
+          ]
+        },
+        {
+          "min": [
+            3.630000114440918,
+            2.882999897003174,
+            -3.8450000286102295
+          ],
+          "max": [
+            5.53000020980835,
+            2.9170000553131104,
+            -3.5350000858306885
+          ]
+        }
+      ],
+      "menuBounds": {
+        "min": [
+          2.0799999237060547,
+          1.9424999952316284,
+          -3.8464999198913574
+        ],
+        "max": [
+          3.5399999618530273,
+          2.817500114440918,
+          -3.7869999408721924
+        ]
+      },
+      "stationBounds": {
+        "min": [
+          2.1449999809265137,
+          1.247499942779541,
+          -2.3450000286102295
+        ],
+        "max": [
+          5.4605889320373535,
+          1.558500051498413,
+          -1.8450000286102295
+        ]
+      },
+      "stockBounds": {
+        "min": [
+          0.6700000166893005,
+          1.1775000095367432,
+          -3.8299999237060547
+        ],
+        "max": [
+          5.289999961853027,
+          3.049999952316284,
+          -3.424999952316284
+        ]
+      },
+      "workingAisle": 0.9249999141693115,
+      "zones": [
+        "wash and drying tools",
+        "filtered hot water and preparation",
+        "commercial grinding tamping and espresso",
+        "milk service and filter storage"
+      ],
+      "menuShelfClearance": 0.08999991416931152
+    },
+    "cakes": {
+      "count": 6,
+      "varieties": [
+        "strawberry shortcake",
+        "berry tart",
+        "opera",
+        "Basque cheesecake",
+        "matcha mille crepe",
+        "Mont Blanc"
+      ]
+    },
+    "roomLight": {
+      "indoorAmbient": "daytime diffuse baseline with local window gradient",
+      "localLightMask": "point and spot contributions restricted to cafe interior, exterior-only materials skip local loops",
+      "windowFillLights": 2,
+      "taskLights": 1,
+      "shelfWash": 1,
+      "readingLights": 1,
+      "pendantLights": 3,
+      "shadows": "cached directional only"
+    },
+    "bicycleBounds": {
+      "min": [
+        -3.5136420726776123,
+        0.11526758223772049,
+        -0.08457113802433014
+      ],
+      "max": [
+        -2.499885320663452,
+        1.2035890817642212,
+        1.4047398567199707
+      ]
+    },
+    "bicycleWallClearance": 0.319885320663452,
+    "parking": {
+      "type": "front-wheel stand",
+      "slots": [
+        [
+          -2.6992078247462428,
+          0.13,
+          0.20153141993433593
+        ],
+        [
+          -3.2141161944512646,
+          0.13,
+          -0.14382255906071878
+        ]
+      ],
+      "tireWidth": 0.046,
+      "guideInnerWidth": 0.102,
+      "occupiedSlot": 0,
+      "rackTopY": 0.1525,
+      "frontTireContactError": 0.00002354524586020701,
+      "rearTireContactError": 0.00005506553923044499
+    },
+    "treeSites": [
+      {
+        "site": "side garden",
+        "origin": [
+          9.4,
+          0.08,
+          -0.7
+        ],
+        "trunkRoadClearance": 13.215000000000002,
+        "rootRoadClearance": 12.786000000000001
+      },
+      {
+        "site": "left roadside planting verge",
+        "origin": [
+          -12.8,
+          0.16,
+          1.2
+        ],
+        "trunkRoadClearance": 1.671,
+        "rootRoadClearance": 1.3044
+      },
+      {
+        "site": "cafe rear garden",
+        "origin": [
+          -0.85,
+          0.16,
+          -6.45
+        ],
+        "trunkRoadClearance": 3.0665,
+        "rootRoadClearance": 2.7506
+      },
+      {
+        "site": "outer roadside garden",
+        "origin": [
+          -12.9,
+          0.08,
+          -24
+        ],
+        "trunkRoadClearance": 1.8199999999999996,
+        "rootRoadClearance": 1.5079999999999996
+      },
+      {
+        "site": "railway-side garden",
+        "origin": [
+          19,
+          0.08,
+          -31
+        ],
+        "trunkRoadClearance": 22.906,
+        "rootRoadClearance": 22.5784
+      }
+    ],
+    "street": {
+      "surface": "continuous asphalt with world-scale grain",
+      "frontRoadStart": 4.65,
+      "sideRoadEdges": [
+        -10.8,
+        -4.2
+      ],
+      "sidewalk": "L-shaped cafe frontage only",
+      "convexMirrors": 0
+    },
+    "flowerCards": 0,
+    "blossoms": 104880,
+    "flowerInstances": 26220,
+    "flowerTriangles": 5558640,
+    "shadowFlowerTriangles": 2936640,
+    "attachmentCurves": 3420,
+    "pedicelTriangles": 314640,
+    "petals": {
+      "emitter": "actual blossom positions",
+      "count": 220,
+      "maxBirthHeight": 7.962694446453126,
+      "minBirthHeight": 3.8599831559637923,
+      "birthAboveCanopy": 0,
+      "roofResting": 92,
+      "roofLandings": 11,
+      "buildingContacts": 12,
+      "rejectedSources": 656,
+      "collisionTriangles": 34670,
+      "pathSamples": 96,
+      "collision": "precomputed first contact on actual roof, glass and shell"
+    }
+  }
+}

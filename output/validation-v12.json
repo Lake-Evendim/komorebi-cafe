@@ -1,0 +1,56 @@
+{
+  "menuItems": [
+    {
+      "name": "深煎りブラジル",
+      "price": 480
+    },
+    {
+      "name": "桜のブレンド",
+      "price": 520
+    },
+    {
+      "name": "エチオピア",
+      "price": 580
+    },
+    {
+      "name": "デカフェ",
+      "price": 520
+    },
+    {
+      "name": "エスプレッソ",
+      "price": 420
+    },
+    {
+      "name": "カフェラテ",
+      "price": 560
+    },
+    {
+      "name": "カプチーノ",
+      "price": 560
+    },
+    {
+      "name": "水出しアイス",
+      "price": 550
+    }
+  ],
+  "menuShelfClearance": 0.08999991416931152,
+  "umbrellaBounds": {
+    "type": "entry umbrella stand with three folded umbrellas",
+    "count": 3,
+    "min": [
+      -1.840000033378601,
+      0.3479999899864197,
+      1.600000023841858
+    ],
+    "max": [
+      -1.5199999809265137,
+      1.2430036067962646,
+      1.9199999570846558
+    ]
+  },
+  "finiteAttributes": 1147,
+  "petalSamples": 22000,
+  "sourceParts": 11647,
+  "mergedMeshes": 352,
+  "triangles": 906508
+}

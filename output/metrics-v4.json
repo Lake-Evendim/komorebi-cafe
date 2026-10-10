@@ -1,0 +1,222 @@
+{
+  "high": {
+    "fps": 31.6,
+    "calls": 317,
+    "triangles": 2834388,
+    "resolution": [
+      1488,
+      835
+    ],
+    "samples": 4,
+    "shadow": 4096,
+    "quality": "high",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 1718,
+    "build": {
+      "sourceParts": 8976,
+      "mergedMeshes": 294,
+      "triangles": 742166,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "art": {
+        "subjects": [
+          "karesansui garden",
+          "window-side coffee still life"
+        ],
+        "textures": [
+          [
+            1536,
+            1024
+          ],
+          [
+            1536,
+            1152
+          ]
+        ]
+      },
+      "books": {
+        "closed": 13,
+        "open": 1,
+        "spines": "individual titles and layered page blocks"
+      },
+      "equipment": {
+        "espressoGroups": 2,
+        "siphons": 3,
+        "grinder": "individual beans and adjustment dial",
+        "pourOver": "scale, server, fluted dripper and filter"
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "attachmentCurves": 3420,
+      "petals": {
+        "emitter": "actual blossom positions",
+        "count": 220,
+        "maxBirthHeight": 7.962694446453126,
+        "minBirthHeight": 3.7799831559637935,
+        "birthAboveCanopy": 0
+      },
+      "activeFlowerTriangles": 1759944,
+      "flowerLevels": [
+        18918,
+        5448,
+        1854
+      ]
+    },
+    "threeRevision": "186"
+  },
+  "balanced": {
+    "fps": 38.8,
+    "calls": 316,
+    "triangles": 2733604,
+    "resolution": [
+      1191,
+      668
+    ],
+    "samples": 4,
+    "shadow": 2048,
+    "quality": "balanced",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 1718,
+    "build": {
+      "sourceParts": 8976,
+      "mergedMeshes": 294,
+      "triangles": 742166,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "art": {
+        "subjects": [
+          "karesansui garden",
+          "window-side coffee still life"
+        ],
+        "textures": [
+          [
+            1536,
+            1024
+          ],
+          [
+            1536,
+            1152
+          ]
+        ]
+      },
+      "books": {
+        "closed": 13,
+        "open": 1,
+        "spines": "individual titles and layered page blocks"
+      },
+      "equipment": {
+        "espressoGroups": 2,
+        "siphons": 3,
+        "grinder": "individual beans and adjustment dial",
+        "pourOver": "scale, server, fluted dripper and filter"
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "attachmentCurves": 3420,
+      "petals": {
+        "emitter": "actual blossom positions",
+        "count": 220,
+        "maxBirthHeight": 7.962694446453126,
+        "minBirthHeight": 3.7799831559637935,
+        "birthAboveCanopy": 0
+      },
+      "activeFlowerTriangles": 1659160,
+      "flowerLevels": [
+        19665,
+        5171,
+        1384
+      ]
+    },
+    "threeRevision": "186"
+  }
+}

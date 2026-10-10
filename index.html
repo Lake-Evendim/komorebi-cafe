@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#526f79" />
+    <title>木漏れ日 / 独立街角样片</title>
+  </head>
+  <body>
+    <main id="scene" aria-label="独立制作的樱花街角三维样片"></main>
+    <header><h1>木漏れ日</h1><p>坡道转角，喫茶店前</p></header>
+    <details id="settings"><summary>取景设置</summary><label>画质<select id="quality"><option value="high">精细 / MSAA 4×</option><option value="balanced">均衡 / MSAA 4×</option></select></label><label>显示<input id="statsToggle" type="checkbox" />性能记录</label><button id="pause" aria-pressed="false">暂停春风</button><p id="metrics" hidden></p><p class="note">独立街角样片<br />非完整小镇</p></details>
+    <footer><nav aria-label="样片取景"><button data-shot="corner" aria-pressed="true">街角全景</button><button data-shot="detail" aria-pressed="false">店面近看</button><button data-shot="inside" aria-pressed="false">喫茶店内</button><button data-shot="roof" aria-pressed="false">屋檐与樱枝</button><button data-shot="parking" aria-pressed="false">轮槽停车架</button><button data-shot="booth" aria-pressed="false">卡座与窗光</button><button data-shot="equipment" aria-pressed="false">吧台器具</button><button data-shot="grinders" aria-pressed="false">豆仓与压粉</button><button data-shot="artwork" aria-pressed="false">两幅壁画</button><button data-shot="reading" aria-pressed="false">墙边书柜</button><button data-shot="cakes" aria-pressed="false">六款蛋糕</button><button data-shot="workflow" aria-pressed="false">后吧台工作区</button><button data-shot="coffee" aria-pressed="false">今日咖啡</button><button data-shot="umbrellas" aria-pressed="false">入口雨具</button><button data-shot="roadside" aria-pressed="false">路缘与树池</button><button data-shot="rear" aria-pressed="false">背面外墙</button></nav><div><button id="photo">纯画面</button><button id="save">保存 PNG</button></div><p>拖动环顾 · 滚轮靠近 · Esc 返回界面</p></footer>
+    <button id="restore" hidden>返回取景</button>
+    <dialog id="capture"><div class="capture-heading"><h2>木漏れ日 / 样片取景</h2><button id="closeCapture" aria-label="关闭画面预览">×</button></div><img id="preview" alt="当前独立街角样片的纯三维画面" /><a id="download" download="木漏れ日-独立样片.png">下载 PNG</a></dialog>
+    <div id="loading" role="status"><span>木漏れ日</span><p id="loadLabel">正在构建独立样片</p></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

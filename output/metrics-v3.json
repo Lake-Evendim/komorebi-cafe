@@ -1,0 +1,152 @@
+{
+  "high": {
+    "fps": 34.3,
+    "calls": 253,
+    "triangles": 2359724,
+    "resolution": [
+      1600,
+      900
+    ],
+    "samples": 4,
+    "shadow": 4096,
+    "quality": "high",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 2184,
+    "build": {
+      "sourceParts": 5109,
+      "mergedMeshes": 234,
+      "triangles": 487358,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "activeFlowerTriangles": 1857928,
+      "flowerLevels": [
+        17871,
+        6269,
+        2080
+      ]
+    },
+    "threeRevision": "186"
+  },
+  "balanced": {
+    "fps": 43.3,
+    "calls": 252,
+    "triangles": 2256776,
+    "resolution": [
+      1280,
+      720
+    ],
+    "samples": 4,
+    "shadow": 2048,
+    "quality": "balanced",
+    "shot": "corner",
+    "paused": false,
+    "buildMs": 2184,
+    "build": {
+      "sourceParts": 5109,
+      "mergedMeshes": 234,
+      "triangles": 487358,
+      "room": {
+        "seating": "upholstered counter stools, wall banquette and window table",
+        "pendants": 3
+      },
+      "roomLight": {
+        "indoorAmbient": "spatial attenuation",
+        "windowFillLights": 2,
+        "shadows": "cached directional"
+      },
+      "bicycleBounds": {
+        "min": [
+          -3.5136420726776123,
+          0.11526758223772049,
+          -0.08457113802433014
+        ],
+        "max": [
+          -2.499885320663452,
+          1.2035890817642212,
+          1.4047398567199707
+        ]
+      },
+      "bicycleWallClearance": 0.319885320663452,
+      "parking": {
+        "type": "front-wheel stand",
+        "slots": [
+          [
+            -2.6992078247462428,
+            0.13,
+            0.20153141993433593
+          ],
+          [
+            -3.2141161944512646,
+            0.13,
+            -0.14382255906071878
+          ]
+        ],
+        "tireWidth": 0.046,
+        "guideInnerWidth": 0.102,
+        "occupiedSlot": 0,
+        "rackTopY": 0.1525,
+        "frontTireContactError": 0.00002354524586020701,
+        "rearTireContactError": 0.00005506553923044499
+      },
+      "flowerCards": 0,
+      "blossoms": 104880,
+      "flowerInstances": 26220,
+      "flowerTriangles": 5558640,
+      "shadowFlowerTriangles": 2936640,
+      "activeFlowerTriangles": 1754980,
+      "flowerLevels": [
+        18405,
+        6380,
+        1435
+      ]
+    },
+    "threeRevision": "186"
+  }
+}
