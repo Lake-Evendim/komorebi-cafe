@@ -2,12 +2,15 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createRenderer, addLight } from './renderer.js';
 import { createWorld } from './world.js';
+import { createInterface, viewCatalog } from './interface.js';
 import './style.css';
 
 const element = identifier => document.getElementById(identifier);
 const shots = {
   corner: { position: [-7.8, 2.55, 11.8], target: [1.2, 2.55, .1] },
   detail: { position: [-4.1, 1.80, 7.8], target: [.55, 1.88, 2.52] },
+  garden: { position: [-3.9, 3.0, 8.2], target: [.3, .55, 3.18] },
+  water: { position: [-3.05, 1.28, 5.45], target: [-2.20, .48, 4.10] },
   inside: { position: [-.98, 1.64, 1.65], target: [2.75, 1.49, -.88] },
   roof: { position: [-5.8, 6.8, 8.8], target: [1.8, 4.5, -.2] },
   parking: { position: [-5.35,1.10,-.75],target: [-2.95,.53,.47] },
@@ -35,8 +38,14 @@ let currentShot = 'corner';
 let resolution = [];
 let quality = 'high';
 let captureUrl = null;
+let ui;
+let cameraTransition = null;
 
-function clean(enabled) { document.body.classList.toggle('clean', enabled); element('restore').hidden = !enabled; }
+function clean(enabled) {
+  ui.closePanels();
+  document.body.classList.toggle('clean', enabled); element('restore').hidden = !enabled;
+  (enabled ? element('restore') : element('photo')).focus({preventScroll:true});
+}
 
 async function start() {
   const started = performance.now();
@@ -47,17 +56,32 @@ async function start() {
   const controls = new OrbitControls(camera, pipeline.renderer.domElement);
   controls.enableDamping = !preference.matches; controls.dampingFactor = .10;
   controls.maxPolarAngle = Math.PI * .57; controls.minDistance = .18; controls.maxDistance = 80;
-  const changeShot = name => {
+  const changeShot = (name, animate = true) => {
+    if(!shots[name]) return;
     currentShot = name;
-    camera.position.set(...shots[name].position); controls.target.set(...shots[name].target); controls.update();
-    document.querySelectorAll('[data-shot]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.shot === name)));
+    if(animate && !preference.matches) {
+      cameraTransition = { start: performance.now(), position: camera.position.clone(), target: controls.target.clone(), endPosition: new THREE.Vector3(...shots[name].position), endTarget: new THREE.Vector3(...shots[name].target) };
+    }else{
+      cameraTransition = null;
+      camera.position.set(...shots[name].position); controls.target.set(...shots[name].target); controls.update();
+    }
+    ui.update(name);
     dirty = true;
   };
+  ui = createInterface({
+    onSelect: name => changeShot(name),
+    onStep: direction => {
+      const index = viewCatalog.findIndex(view => view.id === currentShot);
+      changeShot(viewCatalog[(index + direction + viewCatalog.length) % viewCatalog.length].id);
+    },
+    onReset: () => changeShot(currentShot),
+  });
+  controls.addEventListener('start', () => { cameraTransition = null; });
   function resize() {
     camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
     resolution = pipeline.resize(innerWidth, innerHeight); dirty = true;
   }
-  pipeline.setQuality(quality, lighting.sun); resize(); changeShot('corner');
+  pipeline.setQuality(quality, lighting.sun); resize(); changeShot('corner', false);
   const world = await createWorld(scene, label => { element('loadLabel').textContent = label; });
   world.update(time);
   world.updateDetail(camera, resolution[1]);
@@ -70,15 +94,24 @@ async function start() {
   element('quality').addEventListener('change', event => {
     quality = event.target.value; pipeline.setQuality(quality, lighting.sun); resize();
   });
-  const updatePause = () => { element('pause').textContent = paused ? '继续春风' : '暂停春风'; element('pause').setAttribute('aria-pressed', String(paused)); dirty = true; };
+  const updatePause = () => {
+    const label = paused ? '继续春风' : '暂停春风';
+    element('pause').querySelector('.pause-label').textContent = label;
+    element('pause').setAttribute('aria-label',label); element('pause').title = label;
+    element('pause').setAttribute('aria-pressed', String(paused)); dirty = true;
+  };
   updatePause();
   element('pause').addEventListener('click', () => { paused = !paused; updatePause(); });
   preference.addEventListener('change', event => { paused = event.matches; controls.enableDamping = !event.matches; updatePause(); });
   element('statsToggle').addEventListener('change', event => { element('metrics').hidden = !event.target.checked; });
-  document.querySelectorAll('[data-shot]').forEach(button => button.addEventListener('click', () => changeShot(button.dataset.shot)));
   element('photo').addEventListener('click', () => clean(true)); element('restore').addEventListener('click', () => clean(false));
-  window.addEventListener('keydown', event => { if (event.code === 'Escape') clean(false); });
+  window.addEventListener('keydown', event => { if (event.code === 'Escape' && document.body.classList.contains('clean')) clean(false); });
   element('save').addEventListener('click', () => {
+    // Capture the intended view if a camera move is still in progress.
+    if(cameraTransition) {
+      camera.position.copy(cameraTransition.endPosition); controls.target.copy(cameraTransition.endTarget);
+      cameraTransition = null; controls.update(); world.updateDetail(camera, resolution[1]); dirty = true;
+    }
     pipeline.render(scene, camera);
     pipeline.renderer.domElement.toBlob(blob => {
       if (!blob) return;
@@ -100,6 +133,14 @@ async function start() {
     requestAnimationFrame(frame);
     if (document.hidden || contextLost) { previous = null; return; }
     const delta = previous === null ? 0 : (now - previous) / 1000; previous = now;
+    if(cameraTransition) {
+      const progress = Math.min(1,(now-cameraTransition.start)/780);
+      const ease = progress < .5 ? 4*progress*progress*progress : 1-Math.pow(-2*progress+2,3)/2;
+      camera.position.lerpVectors(cameraTransition.position,cameraTransition.endPosition,ease);
+      controls.target.lerpVectors(cameraTransition.target,cameraTransition.endTarget,ease);
+      dirty = true;
+      if(progress === 1) cameraTransition = null;
+    }
     controls.update();
     if (!paused) time += delta;
     if (!paused || dirty) {
@@ -118,3 +159,4 @@ async function start() {
 }
 
 start().catch(error => { console.error(error); element('loading').hidden = false; element('loadLabel').textContent = `样片未能加载：${error.message}。请检查浏览器硬件加速。`; });
+

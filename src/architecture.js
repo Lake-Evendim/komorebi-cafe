@@ -159,7 +159,7 @@ export function buildCafe(kit, colors, textures) {
     placard(kit, [.68, .78], [0, .6186, .09], textures.menu, '#ffffff', [-.14, 0, 0]);
     for (const offsetX of [-.29, .29]) kit.rod([offsetX, .0086, -.35], [offsetX, 1.0986, .05], .025, frame);
   });
-  buildEntranceGarden(kit,colors);
+  const entranceGarden=buildEntranceGarden(kit,colors);
   const lamp = colors.get('#eee0ad', { emissive: '#efb773', emissiveIntensity: .25 });
   kit.curve([[-1.85, 2.4, 2.55], [-1.85, 2.55, 2.91], [-1.85, 2.48, 3.02]], .016, metal);
   kit.cylinder(.04, .10, .08, [-1.85, 2.46, 3.02], metal, 16);
@@ -171,6 +171,7 @@ export function buildCafe(kit, colors, textures) {
   collisionParts.forEach(geometry=>geometry.dispose());
   collisionGeometry.computeBoundingBox();collisionGeometry.computeBoundingSphere();
   const collision=new THREE.Mesh(collisionGeometry,new THREE.MeshBasicMaterial({side:THREE.DoubleSide}));
-  collision.name='Cafe roof, windows and opaque shell collision';collision.updateMatrixWorld();
+  collision.name='Cafe roof, windows and opaque shell collision';collision.userData.entranceGarden=entranceGarden;collision.updateMatrixWorld();
   return collision;
 }
+

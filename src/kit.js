@@ -123,7 +123,8 @@ export class Kit {
     this.transform.updateMatrix();
     if (this.placement) this.transform.matrix.premultiply(this.placement);
     const copy = geometry.index ? geometry.toNonIndexed() : geometry.clone();
-    for (const attribute of Object.keys(copy.attributes)) if (!['position', 'normal', 'uv'].includes(attribute)) copy.deleteAttribute(attribute);
+    const attributes=material.vertexColors?['position','normal','uv','color']:['position','normal','uv'];
+    for (const attribute of Object.keys(copy.attributes)) if (!attributes.includes(attribute)) copy.deleteAttribute(attribute);
     if (!copy.attributes.uv) copy.setAttribute('uv', new THREE.Float32BufferAttribute(new Float32Array(copy.attributes.position.count * 2), 2));
     copy.applyMatrix4(this.transform.matrix);
     if (this.measuring) {
@@ -227,3 +228,4 @@ export function labelTexture(lines, options = {}) {
     });
   });
 }
+

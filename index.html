@@ -1,19 +1,57 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#526f79" />
-    <title>木漏れ日 / 独立街角样片</title>
-  </head>
-  <body>
-    <main id="scene" aria-label="独立制作的樱花街角三维样片"></main>
-    <header><h1>木漏れ日</h1><p>坡道转角，喫茶店前</p></header>
-    <details id="settings"><summary>取景设置</summary><label>画质<select id="quality"><option value="high">精细 / MSAA 4×</option><option value="balanced">均衡 / MSAA 4×</option></select></label><label>显示<input id="statsToggle" type="checkbox" />性能记录</label><button id="pause" aria-pressed="false">暂停春风</button><p id="metrics" hidden></p><p class="note">独立街角样片<br />非完整小镇</p></details>
-    <footer><nav aria-label="样片取景"><button data-shot="corner" aria-pressed="true">街角全景</button><button data-shot="detail" aria-pressed="false">店面近看</button><button data-shot="inside" aria-pressed="false">喫茶店内</button><button data-shot="roof" aria-pressed="false">屋檐与樱枝</button><button data-shot="parking" aria-pressed="false">轮槽停车架</button><button data-shot="booth" aria-pressed="false">卡座与窗光</button><button data-shot="equipment" aria-pressed="false">吧台器具</button><button data-shot="grinders" aria-pressed="false">豆仓与压粉</button><button data-shot="artwork" aria-pressed="false">两幅壁画</button><button data-shot="reading" aria-pressed="false">墙边书柜</button><button data-shot="cakes" aria-pressed="false">六款蛋糕</button><button data-shot="workflow" aria-pressed="false">后吧台工作区</button><button data-shot="coffee" aria-pressed="false">今日咖啡</button><button data-shot="umbrellas" aria-pressed="false">入口雨具</button><button data-shot="roadside" aria-pressed="false">路缘与树池</button><button data-shot="rear" aria-pressed="false">背面外墙</button></nav><div><button id="photo">纯画面</button><button id="save">保存 PNG</button></div><p>拖动环顾 · 滚轮靠近 · Esc 返回界面</p></footer>
-    <button id="restore" hidden>返回取景</button>
-    <dialog id="capture"><div class="capture-heading"><h2>木漏れ日 / 样片取景</h2><button id="closeCapture" aria-label="关闭画面预览">×</button></div><img id="preview" alt="当前独立街角样片的纯三维画面" /><a id="download" download="木漏れ日-独立样片.png">下载 PNG</a></dialog>
-    <div id="loading" role="status"><span>木漏れ日</span><p id="loadLabel">正在构建独立样片</p></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#344b3e" />
+  <title>木漏れ日 · 街角喫茶</title>
+</head>
+<body>
+  <main id="scene" aria-label="樱花街角咖啡馆三维场景"></main>
+  <div class="scene-shade interface" aria-hidden="true"></div>
+  <header class="brand interface">
+    <div class="brand-seal" aria-hidden="true">木</div>
+    <div><p class="eyebrow">KOMOREBI · 喫茶</p><h1>木漏れ日</h1><p class="brand-note">在街角，停留一会儿。</p></div>
+  </header>
+  <div class="top-actions interface" aria-label="场景偏好">
+    <button id="pause" class="glass-action wind-button" aria-pressed="false"><span class="pause-icon" data-icon="pause"></span><span class="play-icon" data-icon="play"></span><span class="pause-label">暂停春风</span></button>
+    <button id="settings" class="glass-action icon-button" aria-label="打开偏好设置" aria-haspopup="dialog" aria-expanded="false" title="偏好设置"><span data-icon="settings"></span></button>
+  </div>
+  <section class="view-caption interface" aria-label="当前取景">
+    <p class="eyebrow"><span id="viewCategory">街角</span><span class="caption-line"></span><span id="viewNumber">01 / 18</span></p>
+    <h2 id="viewTitle">街角全景</h2><p id="viewDescription">樱花、坡道，与一间安静的喫茶店。</p>
+  </section>
+  <nav class="view-dock interface" aria-label="取景导航">
+    <button id="previousView" class="dock-arrow" aria-label="上一个视角" title="上一个视角"><span data-icon="chevronLeft"></span></button>
+    <button id="openViews" class="view-trigger" aria-haspopup="dialog" aria-expanded="false"><span class="view-trigger-icon" data-icon="grid"></span><span><span class="trigger-label">选择取景</span><span id="currentViewLabel">街角全景</span></span><span class="trigger-chevron" data-icon="chevronUp"></span></button>
+    <button id="nextView" class="dock-arrow" aria-label="下一个视角" title="下一个视角"><span data-icon="chevronRight"></span></button>
+  </nav>
+  <div class="frame-actions interface">
+    <button id="photo" class="glass-action"><span data-icon="frame"></span><span>沉浸</span></button>
+    <button id="save" class="glass-action capture-action"><span data-icon="camera"></span><span>留影</span></button>
+  </div>
+  <p class="gesture-hint interface"><span class="mouse-hint">拖动环顾 <i>·</i> 滚轮靠近</span><span class="touch-hint">单指环顾 <i>·</i> 双指缩放</span></p>
+  <button id="restore" class="glass-action restore-action" hidden><span data-icon="frame"></span>返回取景 <kbd>Esc</kbd></button>
+  <dialog id="shotPicker" class="shot-picker">
+    <div class="panel-heading"><div><p class="eyebrow">A LITTLE WALK</p><h2>换一个角度看看</h2></div><button id="closeViews" class="panel-close" aria-label="关闭取景选择"><span data-icon="close"></span></button></div>
+    <div id="viewTabs" class="view-tabs" role="tablist" aria-label="取景分类"></div>
+    <div id="viewList" class="view-list" role="tabpanel"></div>
+    <div class="picker-foot"><span>十八个视角，慢慢逛。</span><span>← → 切换取景</span></div>
+  </dialog>
+  <dialog id="preferences" class="preferences">
+    <div class="panel-heading"><h2>偏好设置</h2><button id="closeSettings" class="panel-close" aria-label="关闭偏好设置"><span data-icon="close"></span></button></div>
+    <label class="preference-row" for="quality"><span><strong>画面质感</strong><small>选择适合设备的流畅度</small></span><select id="quality"><option value="high">细腻画质</option><option value="balanced">流畅优先</option></select></label>
+    <button id="resetView" class="reset-view"><span data-icon="reset"></span>回到当前取景</button>
+    <details class="technical-details"><summary>运行信息</summary><label class="stats-label"><span>显示性能记录</span><input id="statsToggle" type="checkbox" /></label><p id="metrics" hidden></p></details>
+  </dialog>
+  <dialog id="capture" class="capture-dialog">
+    <div class="panel-heading"><div><p class="eyebrow">A MOMENT TO KEEP</p><h2>留住这一刻</h2><p id="captureCaption" class="capture-caption">街角全景 · 木漏れ日</p></div><button id="closeCapture" class="panel-close" aria-label="关闭照片预览"><span data-icon="close"></span></button></div>
+    <img id="preview" alt="当前咖啡馆取景的照片" />
+    <div class="capture-foot"><span>画面已去除界面元素</span><a id="download" download="木漏れ日-街角喫茶.png"><span data-icon="download"></span>下载照片</a></div>
+  </dialog>
+  <div id="loading" role="status"><div class="loading-seal">木</div><span>木漏れ日</span><div class="loading-line" aria-hidden="true"></div><p id="loadLabel">正在打开街角的春天</p></div>
+  <p id="announcement" class="sr-only" aria-live="polite"></p>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
+

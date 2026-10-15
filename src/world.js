@@ -28,6 +28,7 @@ export async function createWorld(scene, progress) {
   const updatePetals = makePetals(scene, colors, trees,buildingCollision);
   const report = kit.finish();
   report.room = room;
+  report.entranceGarden=buildingCollision.userData.entranceGarden;
   report.art=art;
   Object.assign(report,details);
   report.roomLight = {...shadeRoom(scene),...fixtures};
@@ -49,3 +50,4 @@ export async function createWorld(scene, progress) {
     },
   };
 }
+
