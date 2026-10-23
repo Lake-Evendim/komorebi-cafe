@@ -2,7 +2,11 @@
 
 ## 在线体验
 
-[打开木漏れ日咖啡馆](https://k-cafe.fresh-salmon-sashimi.chatgpt.site) · 已通过 Sites 发布，支持公开访问。
+[GitHub Pages · 打开木漏れ日咖啡馆](https://lake-evendim.github.io/komorebi-cafe/)
+
+[原 Sites 入口](https://k-cafe.fresh-salmon-sashimi.chatgpt.site)
+
+GitHub Pages 通过 GitHub Actions 构建并发布 `dist/`，更新 `main` 分支后自动重新部署。
 
 ## 最新更新：门口植物与交互界面
 
